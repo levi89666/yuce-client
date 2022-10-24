@@ -1,8 +1,26 @@
-export default {
-  getWxAboutData: `/api/v1/enterprisewechat/js/sign`,
-  getAuth: '/api/v1/enterprisewechat/auth',
-  getStuInfo: '/api/v1/enterprisewechat/stu/info', //通过学生user_id检索学生
-  search_stu: '/api/v1/enterprisewechat/student/bymobile', //通过手机号搜索学生信息
-  stu_bind: ['/api/v1/enterprisewechat/bind',"POST", "body"], //绑定
-  stu_unbind: '/api/v1/enterprisewechat/unbind', //绑定
+import { request } from "../utils/request"
+
+// 热点咨询
+export function getHotNews(param) {
+  return request({
+    url: "/api/yuce/v1/hot_news",
+    method: "get",
+    param
+  })
+}
+// 世界杯新闻
+export function getWorldNews(param) {
+  return request({
+    url: "/api/yuce/v1/world_cup_feature",
+    method: "get",
+    param
+  })
+}// 世界杯新闻
+
+export function getHomeNews(param) {
+  return request({
+    url: "/api/yuce/v1/home_news",
+    method: "get",
+    param
+  })
 }

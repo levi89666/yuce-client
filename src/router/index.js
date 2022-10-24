@@ -46,7 +46,7 @@ const routes = [
       {
         path: "news",
         name: "news",
-        component: News
+        component: News,
       }
     ]
   },
